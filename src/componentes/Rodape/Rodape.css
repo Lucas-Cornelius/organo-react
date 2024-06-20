@@ -1,0 +1,26 @@
+.rodape-container {
+    background-color: #6278F7;
+    display: flex;
+    margin-top: 100px;
+    padding: 2rem 0;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    box-shadow: -8px -8px 16px rgba(0, 0, 0, 0.2);
+    border-top: solid 1px white;
+}
+
+.rodape-redes {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+@media (width <= 700px) {
+    .rodape-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+}

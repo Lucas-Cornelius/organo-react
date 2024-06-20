@@ -1,16 +1,25 @@
-.card {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.time {
+    text-align: center;
+    padding: 32px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.card h3  {
+.time div h3  {
     font-size: 2rem;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 8px;
 }
 
-.card h3::after {
-    background-color: black;
-    width: 10px;
-    height: 2px;
+.time div .divisor {
+    width: 50px;
+    height: 3px;
+    margin: 0 auto;
+}
+
+.time .colaboradores {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 32px;
 }
