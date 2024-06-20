@@ -9,10 +9,19 @@ const Formulario = (props) => {
     const [nome, setNome] = useState('');
     const [cargo, setCargo] = useState('');
     const [imagem, setImagem] = useState('');
-    const [time, setTime] = useState('Programação');
+    const [time, setTime] = useState('');
+    const [aviso, setAviso] = useState('');
 
     const aoSalvar = (e) => {
         e.preventDefault();
+
+        if(!time) { 
+            setAviso('O campo "Time" deve ser escolhido');
+            return;
+        };
+        
+        setAviso('');
+
         props.aoColaboradorCadastrado({
             nome,
             cargo,
@@ -22,7 +31,7 @@ const Formulario = (props) => {
         setNome('');
         setCargo('');
         setImagem('');
-        setTime('Programação');
+        setTime('');
     };
 
     return (
@@ -59,6 +68,7 @@ const Formulario = (props) => {
                     itens={props.times}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
+                    aviso={aviso}
                 />
 
                 <Botao>
